@@ -72,7 +72,7 @@ const Page3 = () => {
           </p>
           <div className="pt-2">
             <a
-              href="/Ankit.pdf"
+              href="https://docs.google.com/document/d/1EdkbJTHqlirnfTfSvHjDF00kEIoyrhA55LnhaBA0S_k/edit?usp=sharing"
               download
               className="inline-block bg-blue-600 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition"
             >
