@@ -1,7 +1,6 @@
-
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-import TiltText from '../components/TiltText';
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import TiltText from "../components/TiltText";
 
 const Page1 = () => {
   const tiltRef = useRef(null);
@@ -9,7 +8,8 @@ const Page1 = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const { width, height, left, top } = containerRef.current.getBoundingClientRect();
+      const { width, height, left, top } =
+        containerRef.current.getBoundingClientRect();
       const x = e.clientX - left;
       const y = e.clientY - top;
 
@@ -23,37 +23,37 @@ const Page1 = () => {
         rotateY,
         rotateX,
         duration: 0.35,
-        ease: 'power2.out',
+        ease: "power2.out",
         transformPerspective: 1000,
-        transformOrigin: 'center center',
+        transformOrigin: "center center",
       });
     };
-  
-
 
     const container = containerRef.current;
-    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener("mousemove", handleMouseMove);
 
-    return () => container.removeEventListener('mousemove', handleMouseMove);
+    return () => container.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
-    <div ref={containerRef} className='h-screen bg-white p-7'>
+    <div ref={containerRef} className="h-screen bg-white p-4 sm:p-7">
       <div className="relative h-full w-full shadow-xl shadow-gray-600 bg-[url('/images/amit.png')] rounded-3xl bg-cover bg-center bg-no-repeat">
-
-
         {/* Tilted Text */}
-        <div className='absolute top-[55%] right-10 transform -translate-y-1/2 sm:right-16 md:right-24 lg:right-32'>
+        <div
+          className="
+            absolute 
+            top-1/2 
+            left-1/2 
+            -translate-x-1/2 -translate-y-1/2 
+            sm:top-[55%] sm:right-10 sm:left-auto sm:translate-x-0
+            md:right-16 lg:right-24 xl:right-32
+          "
+        >
           <TiltText ref={tiltRef} />
         </div>
-
-       
       </div>
     </div>
   );
 };
 
 export default Page1;
-
-
-
