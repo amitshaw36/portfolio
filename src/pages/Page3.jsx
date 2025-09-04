@@ -52,7 +52,7 @@ const Page3 = () => {
           </p>
           <p>
             <a
-              href="https://github.com/amitshaw-08"
+              href="https://github.com/amitshaw36"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline hover:text-blue-800 transition"
