@@ -20,8 +20,8 @@ function App() {
           element={
             <>
               <Page1 />
-              <Page2 />
               <Page3 />
+              <Page2 />
             </>
           }
         />
