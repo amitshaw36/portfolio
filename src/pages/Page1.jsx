@@ -16,7 +16,7 @@ const Page1 = () => {
       const centerX = width / 2;
       const centerY = height / 2;
 
-      const rotateY = ((x - centerX) / centerX) * 10; // Max 10deg
+      const rotateY = ((x - centerX) / centerX) * 10;
       const rotateX = -((y - centerY) / centerY) * 10;
 
       gsap.to(tiltRef.current, {
@@ -36,13 +36,16 @@ const Page1 = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-white p-4 sm:p-7">
-      <div className="relative h-full w-full shadow-xl shadow-gray-600 rounded-3xl overflow-hidden">
+    <div
+      ref={containerRef}
+      className="h-screen w-screen overflow-hidden bg-white"
+    >
+      <div className="relative h-full w-full shadow-xl shadow-gray-600 overflow-hidden">
         {/* Responsive Background Image */}
         <img
           src="/images/amit.png"
           alt="Amit"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover block"
         />
 
         {/* Tilted Text */}
