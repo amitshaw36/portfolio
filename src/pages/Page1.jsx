@@ -36,16 +36,13 @@ const Page1 = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="h-screen w-screen overflow-hidden bg-white"
-    >
-      <div className="relative h-full w-full shadow-xl shadow-gray-600 overflow-hidden">
+    <div ref={containerRef} className="h-screen w-screen bg-white">
+      <div className="relative h-full w-full shadow-xl shadow-gray-600 rounded-none overflow-hidden">
         {/* Responsive Background Image */}
         <img
           src="/images/amit.png"
           alt="Amit"
-          className="w-full h-full object-cover block"
+          className="w-full h-full object-cover"
         />
 
         {/* Tilted Text */}
